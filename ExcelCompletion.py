@@ -15,9 +15,9 @@ import pymysql
 
 class up:
     def __init__(self):
-        db=pymysql.connect("106.53.220.183","root","Liu1313561887500","user")
+        db=pymysql.connect("host","user","password","database")
         cursor=db.cursor()
-        cursor.execute("select username,password from wanfeng")
+        cursor.execute("select username,password from table")
         self.data = cursor.fetchone()
         db.close()
 
